@@ -3,7 +3,7 @@ import os
 
 # Paths
 video_path = "data/7.mp4"
-label_path = "data/7_fusebox.txt"
+label_path = "data/7.txt"
 output_video_path = "data/7_plotted.mp4"
 
 # Read labels from file

@@ -4,7 +4,7 @@ from tkinter import Tk, Label, Button, StringVar, Canvas
 from tkinter import ttk
 from PIL import Image, ImageTk
 
-video_path = 'data/7.mp4'
+video_path = 'data/8.mp4'
 labels_file_path = os.path.join(os.path.dirname(video_path), os.path.basename(video_path).replace('.mp4', '.txt'))
 
 # mapping = {
@@ -66,6 +66,7 @@ mapping = {
     'D': 'B21_CheckVinylSheet',
     'E': 'B22_AlignCable',
     'F': 'B22_CheckConnector',
+    '$': 'B22_CheckLAConnector',
     'G': 'B23_AlignCable',
     'H': 'B23_CheckConnector',
     'I': 'B24_AlignCable',
