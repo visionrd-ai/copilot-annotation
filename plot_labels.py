@@ -2,9 +2,9 @@ import cv2
 import os
 
 # Paths
-video_path = "data/7.mp4"
-label_path = "data/7.txt"
-output_video_path = "data/7_plotted.mp4"
+video_path = "/home/multi-gpu/amur/production/data/all_videos/3.mp4"
+label_path = "/home/multi-gpu/amur/production/data/all_videos/3.txt"
+output_video_path = "3_plotted.mp4"
 
 # Read labels from file
 frame_labels = {}
