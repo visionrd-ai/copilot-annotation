@@ -18,7 +18,7 @@ mapping = [
     "install_fusebox", "clip_wh_1", "clip_wh_2", "clip_wh_3", "clip_wh_4", "clip_wh_5",
     "clip_wh_6", "clip_wh_7", "clip_wh_8", "clip_wh_9", "clip_wh_10", "clip_wh_11",
     "clip_wh_12", "clip_wh_13", "clip_wh_14", "clip_wh_15", "clip_wh_16", "clip_wh_17", "clip_wh_18", "clip_wh_19", "clip_wh_20",  "install_fusebox_bolt", "marker_check",
-    "torque_check", "drill_wh_clip_1", "rill_wh_clip_2", "rill_wh_clip_3", "rill_wh_clip_4", "rill_wh_clip_5"
+    "torque_check", "drill_wh_clip_1", "drill_wh_clip_2", "drill_wh_clip_3", "drill_wh_clip_4", "drill_wh_clip_5"
 ]
 label_list = list(mapping)
 
