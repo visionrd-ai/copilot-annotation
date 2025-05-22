@@ -17,8 +17,8 @@ mapping = [
     "drill_DM_bolt_5", "drill_DM_bolt_6", "drill_DB", "drill_LT", "unwrap_harness",
     "install_fusebox", "clip_wh_1", "clip_wh_2", "clip_wh_3", "clip_wh_4", "clip_wh_5",
     "clip_wh_6", "clip_wh_7", "clip_wh_8", "clip_wh_9", "clip_wh_10", "clip_wh_11",
-    "clip_wh_12", "clip_wh_13", "clip_wh_14", "install_fusebox_bolt", "marker_check",
-    "torque_check"
+    "clip_wh_12", "clip_wh_13", "clip_wh_14", "clip_wh_15", "clip_wh_16", "clip_wh_17", "clip_wh_18", "clip_wh_19", "clip_wh_20",  "install_fusebox_bolt", "marker_check",
+    "torque_check", "drill_wh_clip_1", "rill_wh_clip_2", "rill_wh_clip_3", "rill_wh_clip_4", "rill_wh_clip_5"
 ]
 label_list = list(mapping)
 
@@ -108,12 +108,12 @@ def start_labeling(video_path):
             pass  # Ignore invalid input
 
     def save_and_exit():
-        label_path = video_path.replace('.avi', '.txt')
+        label_path = video_path.replace('.mp4', '.txt')
         with open(label_path, 'w') as f:
             for frame_idx in sorted(labels_dict.keys()):
                 f.write(f"{frame_idx}: {labels_dict[frame_idx]}\n")
 
-        mapping_path = video_path.replace('.avi', '_mapping.txt')
+        mapping_path = video_path.replace('.mp4', '_mapping.txt')
         with open(mapping_path, 'w') as f:
             for label in label_list:
                 f.write(f"{label}\n")
@@ -149,7 +149,7 @@ def start_labeling(video_path):
 
 # ---------- Plotting ----------
 def start_plotting(video_path, label_path):
-    output_path = os.path.basename(video_path).replace('.avi', '_plotted.avi')
+    output_path = os.path.basename(video_path).replace('.mp4', '_plotted.mp4')
     output_video_path = os.path.join(os.path.dirname(video_path), output_path)
 
     frame_labels = {}
@@ -186,12 +186,12 @@ def start_plotting(video_path, label_path):
 
 # ---------- Main Menu ----------
 def choose_labeling():
-    video_path = filedialog.askopenfilename(filetypes=[("avi files", "*.avi")])
+    video_path = filedialog.askopenfilename(filetypes=[("mp4 files", "*.mp4")])
     if video_path:
         start_labeling(video_path)
 
 def choose_plotting():
-    video_path = filedialog.askopenfilename(title="Select Video", filetypes=[("avi files", "*.avi")])
+    video_path = filedialog.askopenfilename(title="Select Video", filetypes=[("mp4 files", "*.mp4")])
     if not video_path:
         return
     label_path = filedialog.askopenfilename(title="Select Label File", filetypes=[("Text files", "*.txt")])
